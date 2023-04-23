@@ -1,5 +1,5 @@
-FROM openjdk:20-ea-19-slim-buster
+FROM openjdk:17-alpine
 WORKDIR /app
-COPY target/DemoApp-0.0.1-SNAPSHOT.jar app.jar
+COPY target/demo-app.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
